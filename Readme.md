@@ -45,11 +45,13 @@ Buffered reading with file iterators.
 No intermediate large objects created (e.g., huge lists).
 You could process millions of lines per minute, depending on disk and CPU.
 
-Benchmarks (Estimates)
-Input Size	Traditional (pandas/readlines)	Your App (generators)
-1 GB	    ~1–2 GB RAM usage	            ~20–50 MB RAM
-5 GB	    Often crashes or swaps	        Still ~20–50 MB RAM
-10M lines	~20–30 sec	                    ~5–10 sec (no full load)
+## Benchmarks (Estimates)
+
+| Input Size | Traditional (pandas/readlines) | Your App (generators) |
+|------------|--------------------------------|-----------------------|
+| 1 GB       | ~1–2 GB RAM usage              | ~20–50 MB RAM         |
+| 5 GB       | Often crashes or swaps         | Still ~20–50 MB RAM   |
+| 10M lines  | ~20–30 sec                     | ~5–10 sec (no full load) |
 
 Tips:
 Use memory-mapped files (mmap) if random access is needed.
