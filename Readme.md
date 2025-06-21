@@ -12,15 +12,15 @@ Easy to integrate into larger data pipelines
 
 🛠 Installation
 Clone the repository:
-```git clone https://github.com/nikpirat/python-log-parser.git```
-```cd python-log-parser```
+`git clone https://github.com/nikpirat/python-log-parser.git`
+`cd python-log-parser`
 
 ▶️ Usage
-```python log_parser.py /path/to/your/large-log-file.log```
+`python log_parser.py /path/to/your/large-log-file.log`
 You can customize parsing behavior (e.g. filters or output) by modifying the log_parser.py script or passing CLI arguments (if implemented).
 
 📁 Example
-```python log_parser.py ./logs/server.log --filter ERROR --output errors.txt```
+`python log_parser.py ./logs/server.log --filter ERROR --output errors.txt`
 
 Advantages:
 
