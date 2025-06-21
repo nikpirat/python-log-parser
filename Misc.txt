@@ -1,0 +1,27 @@
+log_parser_project/
+│
+├── logs/                     # (Optional) Sample or test log files
+│   └── sample.log
+│
+├── parser/                  # Core logic of your parser
+│   ├── __init__.py
+│   ├── reader.py            # Reads file line by line using generators
+│   ├── parser.py            # Parses raw lines into structured data
+│   ├── filters.py           # Filters parsed data (e.g., only 500 errors)
+│   ├── writer.py            # Writes processed data to output (CSV, DB, etc.)
+│
+├── main.py                  # Entrypoint: ties everything together
+│
+├── config.py                # (Optional) Configs like file paths, patterns
+│
+├── requirements.txt         # Dependencies (keep minimal)
+│
+├├── tests/
+│   ├── __init__.py
+│   ├── test_reader.py         # Tests for log line reading
+│   ├── test_parser.py         # Tests for line parsing (regex, format)
+│   ├── test_filters.py        # Tests for status filtering
+│   ├── test_writer.py         # Tests for CSV writing
+│   └── test_end_to_end.py     # Optional: full pipeline test (integration)
+│
+└── README.md                # Project overview, how to run, etc.
